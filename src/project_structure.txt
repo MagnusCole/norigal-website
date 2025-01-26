@@ -1,0 +1,17 @@
+📂 app/
+📂 app\components/
+📄 app\components\Footer.tsx
+📄 app\components\Header.tsx
+📄 app\components\ProjectGrid.tsx
+📂 app\contacto/
+📄 app\contacto\page.tsx
+📄 app\layout.tsx
+📂 app\lib/
+📄 app\lib\sanityClient.ts
+📄 app\page.tsx
+📂 app\portafolio/
+📄 app\portafolio\page.tsx
+📂 app\styles/
+📄 app\styles\globals.css
+📄 extractStructure.js
+📄 project_structure.txt
