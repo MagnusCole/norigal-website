@@ -1,28 +1,49 @@
+/* app/styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background-light: #ffffff;
-  --foreground-light: #171717;
+  --foreground-light: #000000;
   --background-dark: #0a0a0a;
-  --foreground-dark: #ededed;
-}
-
-body {
-  color: var(--foreground-light);
-  background: var(--background-light);
-  font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s, color 0.3s; /* Transiciones para modo oscuro */
-}
-
-code, pre {
-  font-family: 'Space Mono', monospace;
+  --foreground-dark: #ffffff;
+  --primary-cyan: #00bcd4;
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    color: var(--foreground-dark);
-    background: var(--background-dark);
+  :root {
+    --background-light: var(--background-dark);
+    --foreground-light: var(--foreground-dark);
   }
+}
+
+body {
+  background: var(--background-light);
+  color: var(--foreground-light);
+  font-family: 'IBM Plex Mono', monospace;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Espaciado uniforme entre secciones */
+section {
+  @apply py-10;
+}
+
+/* Interacciones suaves */
+a {
+  @apply transition-colors duration-300;
+}
+a:hover {
+  color: var(--primary-cyan);
+}
+
+/* Bordes dinámicos */
+.border {
+  @apply border-gray-300 dark:border-gray-700;
+}
+
+/* Encabezados consistentes */
+h1, h2, h3 {
+  @apply tracking-tight;
 }
